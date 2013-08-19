@@ -65,7 +65,7 @@ npm install
 
 # Step 6b. Install node copyedit server upstart scripts.
 
-(echo "start on runlevel [2345]" ; echo script ; echo "  cd `pwd`"; echo '  sudo -u ubuntu node server.js' \' '{"name": "Leo Meyerovich", "email": "lmeyerov+mtbc@gmail.com", "mandrillApiKey": "'${mandrillApiKey}'", "askHuman": "localhost/human/", "proofUrl": "http://localhost:3000/"}' \' \> stdout 2\> stderr; echo end script) > /etc/init/copyedit-node-server.conf
+(echo "start on runlevel [2345]" ; echo script ; echo "  cd `pwd`"; echo '  sudo -u ubuntu node server.js' \' '{"name": "Leo Meyerovich", "email": "lmeyerov+mtbc@gmail.com", "mandrillApiKey": "'${mandrillApiKey}'", "askHuman": "http://localhost/human/", "proofUrl": "http://localhost:3000/"}' \' \> stdout 2\> stderr; echo end script) > /etc/init/copyedit-node-server.conf
 
 # Step 7. Install dependencies for nltk wrapped with a zmq wrapper
 
