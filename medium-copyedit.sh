@@ -78,7 +78,7 @@ sudo pip install -r requirements.txt
 
 # Step 8. Install nginx configs.
 
-(echo 'upstream askhuman { server localhost:6000; }' ;
+(echo 'upstream askhuman { server localhost:7000; }' ;
  echo 'upstream nodecopyedit { server localhost:3000; }' ;
  echo 'server {' ;
  echo 'location /human/ { rewrite /human/(.*) /$1 break; proxy_pass http://askhuman; }' ;
