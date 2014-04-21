@@ -8,7 +8,7 @@ curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install jruby
 rvm use jruby
-yes | sudo apt-get install libxslt-dev libxml2-dev
+echo y | sudo apt-get install libxslt-dev libxml2-dev
 gem install bundler
 
 (echo "start on runlevel [2345]" ; echo script ; echo sudo -u ubuntu bash -c \'source ~/.rvm/scripts/rvm\; cd ~/pem\; ruby app.rb -p 6000 -e production\' ; echo end script) > /etc/init/pem-app.conf
