@@ -1,13 +1,13 @@
 sudo apt-get update
-yes | sudo apt-get install git
+echo Y | sudo apt-get install git
 sudo chmod 777 /etc/init/
 
-yes | sudo apt-get install libsqlite3-dev nginx s3cmd lame
+echo Y | sudo apt-get install libsqlite3-dev nginx s3cmd lame
 
-curl -L https://get.rvm.io | bash -s stable
+curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
-rvm install 1.9.3
-rvm use 1.9.3
+rvm install jruby
+rvm use jruby
 yes | sudo apt-get install libxslt-dev libxml2-dev
 gem install bundler
 
